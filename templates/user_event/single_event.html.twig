@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Event{% endblock %}
+
+{% block body %}
+    <h1>{{ event.name }}</h1>
+    <p>{{ event.description }}</p>
+
+    <h3>Discussion</h3>
+
+    {% for post in event.posts %}
+    <div>
+        <h4>{{ post.author }}</h4>
+        <p>{{ post.contents }}</p>
+    <div>
+    {% endfor %}
+
+{% endblock %}
